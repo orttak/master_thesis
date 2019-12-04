@@ -1,0 +1,15 @@
+version: '3'
+services:
+  app:
+    build: 
+      context: .
+      dockerfile: docker/app/Dockerfile
+    restart: always
+    ports:
+      - "9999:8888"
+    volumes:
+      - .:/home
+    env_file:
+        - .env
+
+    command: jupyter-lab --port=8888 --no-browser --ip=0.0.0.0 --allow-root
