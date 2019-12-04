@@ -4,6 +4,7 @@
 For installing Docker, you can follow the official document. 
 ##### Windows Users
 [1- Enabled virtualization ](https://docs.docker.com/docker-for-windows/troubleshoot/#virtualization-must-be-enabled)
+
 [2-You can download Docker Desktop for Windows from Docker Hub.](https://docs.docker.com/docker-for-windows/install/)
 
 ##Download Application 
