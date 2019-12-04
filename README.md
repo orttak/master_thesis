@@ -18,7 +18,9 @@ git clone git@github.com:orttak/master_thesis.git
 ```
 cd master_thesis
 ```
-##Running Docker
+
+## Running Docker
+
 
 ```
 cp default.env .env
