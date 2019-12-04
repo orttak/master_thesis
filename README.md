@@ -13,7 +13,7 @@ There are two ways to download the application. You can direct download .zip fil
 cd working_directory
 ```
 ```
-git clone git@github.com:orttak/master_thesis.git
+git clone https://github.com/orttak/master_thesis.git
 ```
 
 ```
