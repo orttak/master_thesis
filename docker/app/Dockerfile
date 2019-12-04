@@ -1,4 +1,5 @@
 FROM ubuntu:18.04
+
 #USER root
 
 ## Set environment variables
@@ -6,6 +7,8 @@ ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
 
 
 RUN apt-get update --fix-missing
+
+
 RUN apt-get install -y wget \
 	bzip2 \
 	ca-certificates \
@@ -20,17 +23,21 @@ RUN apt-get install -y wget \
 	unzip \
 	software-properties-common \
 	llvm
+
 RUN add-apt-repository -y ppa:ubuntugis/ubuntugis-unstable && apt-get update
+RUN apt-get update --fix-missing
 
 # Set python aliases for python3
 RUN echo 'alias python=python3' >> ~/.bashrc
 RUN echo 'alias pip=pip3' >> ~/.bashrc
 
+RUN apt-get install -y gdal-bin \
+		       libgdal-dev
+
 # Update C env vars so compiler can find gdal
 ENV CPLUS_INCLUDE_PATH=/usr/include/gdal
 ENV C_INCLUDE_PATH=/usr/include/gdal
 
-RUN apt install -y gdal-bin python-gdal python3-gdal
 
 ## Install packages to Python3
 RUN pip3 install --upgrade pip
