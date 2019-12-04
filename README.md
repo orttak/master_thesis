@@ -36,7 +36,7 @@ Go to  http://127.0.0.1:9999/lab
 
 Open Docker container command 
 ```
-docker exec -it   containerID
+docker exec -it   containerID  /bin/bash
 ```
 You can learn containerID with 'docker ps' command.
 
